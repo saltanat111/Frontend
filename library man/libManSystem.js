@@ -20,7 +20,7 @@ const books = [
   }
   
   function lendBook(books, title) 
-  {
+  { 
     const book = books.find(book => book.title === title);  
     
     if (book) {  
