@@ -5,30 +5,38 @@ const books = [
     { title: "The Idiot", author: "Fyodor Dostoevsky", isAvailable: false }
   ];
   
-  function getBooksByAuthor(books, author) {
+  function getBooksByAuthor(books, author) 
+  {
     return books
       .filter(book => book.author === author)  
       .map(book => book.title);
   }
   
-  function countAvailableBooks(books) {
+  function countAvailableBooks(books) 
+  {
     return books
       .filter(book => book.isAvailable)  
       .length; 
   }
   
-  function lendBook(books, title) {
+  function lendBook(books, title) 
+  {
     const book = books.find(book => book.title === title);  
     
     if (book) {  
-      if (book.isAvailable) {
-        book.isAvailable = false;  
-        return `The book ${title} has been successfully lent!`;
-      } else {
-        return `The book ${title} is not available!`;
-      }
-    } else {
-      return `The book ${title} was not found in the library!`;  
+        if (book.isAvailable) 
+          {
+          book.isAvailable = false;  
+          return `The book ${title} has been successfully lent!`;
+        } 
+        else 
+        {
+          return `The book ${title} is not available!`;
+        }
+    } 
+    else 
+    {
+        return `The book ${title} was not found in the library!`;  
     }
   }
   
